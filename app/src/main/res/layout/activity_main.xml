@@ -1,190 +1,195 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#ffffff"
+    android:layout_height="match_parent">
 
-    android:orientation="vertical"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:weightSum="1"
-    tools:context="id.sch.smktelkom_mlg.learn.macregistrationform.MainActivity">
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="90dp"
-        android:layout_height="70dp"
-        android:layout_gravity="center"
-        android:src="@drawable/mac" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:text="Moklet Art Club"
-        android:textColor="#021982"
-        android:textSize="17dp"
-        android:textStyle="bold" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="Registration Form"
-        android:textColor="#021982"
-        android:textSize="20dp"
-        android:textStyle="bold" />
-
-    <Space
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="0.04" />
+        android:layout_height="match_parent"
+        android:background="#ffffff"
 
-    <android.support.design.widget.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:weightSum="1"
+        tools:context="id.sch.smktelkom_mlg.learn.macregistrationform.MainActivity">
 
-        <EditText
-            android:id="@+id/editTextNama"
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="90dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+            android:src="@drawable/mac" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Moklet Art Club"
+            android:textColor="#021982"
+            android:textSize="17dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Registration Form"
+            android:textColor="#021982"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <Space
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Name"
+            android:layout_weight="0.04" />
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/editTextNama"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Name"
+                android:textColor="#021982"
+                android:textColorHint="#fb2999" />
+        </android.support.design.widget.TextInputLayout>
+
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.04" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gender"
+            android:textColor="#fb2999"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:layout_width="102dp"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/radioButtonLaki"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="#021982"
+                android:checked="false"
+                android:text="Male"
+                android:textColor="#021982" />
+
+            <RadioButton
+                android:id="@+id/radioButtonPerempuan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="#021982"
+                android:checked="false"
+                android:text="Female"
+                android:textColor="#021982" />
+        </RadioGroup>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.04" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Course/Class"
+            android:textColor="#fb2999"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/spinnerJurusan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:entries="@array/jurusan"
+            android:foreground="#021982" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.04" />
+
+        <Spinner
+            android:id="@+id/spinnerKelas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:foreground="#021982" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.04" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Object Of Interest in MAC"
+            android:textColor="#fb2999"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+
+        <CheckBox
+            android:id="@+id/checkBoxDance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="#021982"
+            android:checked="false"
+            android:text="Dance" />
+
+        <CheckBox
+            android:id="@+id/checkBoxAkustik"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="#021982"
+            android:checked="false"
+            android:text="Acoustics" />
+
+        <CheckBox
+            android:id="@+id/checkBoxTeather"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="#021982"
+            android:checked="false"
+            android:text="Theater" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/buttonSubmit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#021982"
+            android:text="SUBMIT"
+            android:textColor="#fb2999"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textViewHasil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
             android:textColor="#021982"
-            android:textColorHint="#fb2999" />
-    </android.support.design.widget.TextInputLayout>
-
-
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="0.04" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Gender"
-        android:textColor="#fb2999"
-        android:textSize="15dp"
-        android:textStyle="bold" />
-
-    <RadioGroup
-        android:layout_width="102dp"
-        android:layout_height="wrap_content">
-
-        <RadioButton
-            android:id="@+id/radioButtonLaki"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:buttonTint="#021982"
-            android:checked="false"
-            android:text="Male"
-            android:textColor="#021982" />
-
-        <RadioButton
-            android:id="@+id/radioButtonPerempuan"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:buttonTint="#021982"
-            android:checked="false"
-            android:text="Female"
-            android:textColor="#021982" />
-    </RadioGroup>
-
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="0.04" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Course/Class"
-        android:textColor="#fb2999"
-        android:textSize="15dp"
-        android:textStyle="bold" />
-
-    <Spinner
-        android:id="@+id/spinnerJurusan"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:clickable="false"
-        android:entries="@array/jurusan"
-        android:foreground="#021982" />
-
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="0.04" />
-
-    <Spinner
-        android:id="@+id/spinnerKelas"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:foreground="#021982" />
-
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="0.04" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Object Of Interest in MAC"
-        android:textColor="#fb2999"
-        android:textSize="15dp"
-        android:textStyle="bold" />
-
-    <CheckBox
-        android:id="@+id/checkBoxDance"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:buttonTint="#021982"
-        android:checked="false"
-        android:text="Dance" />
-
-    <CheckBox
-        android:id="@+id/checkBoxAkustik"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:buttonTint="#021982"
-        android:checked="false"
-        android:text="Acoustics" />
-
-    <CheckBox
-        android:id="@+id/checkBoxTeather"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:buttonTint="#021982"
-        android:checked="false"
-        android:text="Theater" />
-
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-
-    <Button
-        android:id="@+id/buttonSubmit"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#021982"
-        android:text="SUBMIT"
-        android:textColor="#fb2999"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/textViewHasil"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="2"
-        android:textColor="#021982"
-        android:textSize="13dp"
-        android:textStyle="bold"
-        tools:text="Hasil" />
-</LinearLayout>
+            android:textSize="13dp"
+            android:textStyle="bold"
+            tools:text="Hasil" />
+    </LinearLayout>
+</ScrollView>
